@@ -12,7 +12,7 @@ const Skills = () => {
         ],
         "Tools & Others": [
             "Git", "Docker", "AWS", "Supabase", "VS Code",
-            "Figma", "Agile/Scrum", "CI/CD", "Testing"
+            "Figma", "Agile/Scrum", "CI/CD"
         ]
     };
 
