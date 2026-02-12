@@ -76,7 +76,7 @@ const Contact = () => {
 
             <div className="text-center mb-8">
 
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-gray-600 dark:text-gray-300">
 
                     I'm always interested in hearing about new opportunities and exciting projects.
 
@@ -102,21 +102,21 @@ const Contact = () => {
 
                         rel="noopener noreferrer"
 
-                        className="flex flex-col items-center p-6 bg-white rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-200 group"
+                        className="flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-md transition-all duration-200 group"
 
                         aria-label={`Contact via ${contact.type}`}
 
                     >
 
-                        <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full text-gray-600 group-hover:bg-gray-900 group-hover:text-white transition-colors duration-200 mb-4">
+                        <div className="flex items-center justify-center w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300 group-hover:bg-gray-900 dark:group-hover:bg-gray-600 group-hover:text-white transition-colors duration-200 mb-4">
 
                             {contact.icon}
 
                         </div>
 
-                        <h3 className="text-sm font-medium text-gray-900 mb-1">{contact.type}</h3>
+                        <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-1">{contact.type}</h3>
 
-                        <p className="text-sm text-gray-600 break-all">{contact.value}</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 break-all">{contact.value}</p>
 
                     </a>
 
