@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import DarkModeToggle from './DarkModeToggle';
 
+import AJLogo from '../assets/AJ.svg';
+
 
 
 const Navbar = () => {
@@ -62,7 +64,7 @@ const Navbar = () => {
 
                     <div className="flex-shrink-0">
 
-                        <h1 className="text-xl font-bold text-gray-900 dark:text-white">Portfolio</h1>
+                        <img src={AJLogo} alt="AJ Logo" className="h-8 w-8" />
 
                     </div>
 

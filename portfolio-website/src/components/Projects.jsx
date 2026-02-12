@@ -42,7 +42,7 @@ const Projects = () => {
             <div className="flex justify-center mb-8">
                 <div className="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center">
                     <svg className="w-10 h-10 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.406 1.918-2.8 3.112-2.8 3.112 0 1.918-1.406 3.112-2.8 0-1.918 1.406-3.112 2.8-3.112 0-1.918 1.406-3.112 2.8zm3.112 3.112a1.406 1.406 0 2.812 0 5.625-1.406 1.406-1.406 1.406 0-2.812 0-5.625 1.406-1.406zm0 3.112v3.112a1.406 1.406 0 2.812 0 5.625-1.406 1.406-1.406 1.406 0-2.812 0-5.625 1.406-1.406zm0 3.112v3.112a1.406 1.406 0 2.812 0 5.625-1.406 1.406-1.406 1.406 0-2.812 0-5.625 1.406-1.406zm0 3.112v3.112a1.406 1.406 0 2.812 0 5.625-1.406 1.406-1.406 1.406 0-2.812 0-5.625 1.406-1.406z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                 </div>
             </div>
@@ -64,7 +64,7 @@ const Projects = () => {
                     Coming Soon
                 </span>
                 <svg className="w-4 h-4 text-gray-400 dark:text-gray-500 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m0 0l-3-3m3 3v4m0 0l-3 3m3-3v4m0 0l-3 3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             </div>
         </div>

@@ -10,9 +10,9 @@ const Contact = () => {
 
             type: "Email",
 
-            value: "john.doe@example.com",
+            value: "torralbaarcjohn@gmail.com",
 
-            href: "mailto:john.doe@example.com",
+            href: "mailto:torralbaarcjohn@gmail.com",
 
             icon: (
 
@@ -30,9 +30,9 @@ const Contact = () => {
 
             type: "LinkedIn",
 
-            value: "linkedin.com/in/johndoe",
+            value: "linkedin.com/in/arcjohntorralba",
 
-            href: "https://linkedin.com/in/johndoe",
+            href: "https://www.linkedin.com/in/arcjohntorralba/",
 
             icon: (
 
@@ -50,9 +50,9 @@ const Contact = () => {
 
             type: "GitHub",
 
-            value: "github.com/johndoe",
+            value: "github.com/cheetoezzz",
 
-            href: "https://github.com/johndoe",
+            href: "https://github.com/cheetoezzz",
 
             icon: (
 
