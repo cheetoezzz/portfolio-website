@@ -9,7 +9,7 @@ const Projects = () => {
             techStack: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "Ticketmaster API", "Bandsintown API"],
             githubUrl: "https://github.com/cheetoezzz/concert-event-tracker",
             liveUrl: "https://event-tracker-lilac-tau.vercel.app/",
-            image: "/src/assets/eventracker.JPG"
+            image: "/src/assets/eventtracker.PNG"
         },
         // {
         //     title: "E-Commerce Platform",
