@@ -2,23 +2,34 @@ import React from 'react';
 
 
 
-const ProjectCard = ({ title, description, techStack, githubUrl, liveUrl, index }) => {
+const ProjectCard = ({ title, description, techStack, githubUrl, liveUrl, index, image }) => {
 
     return (
 
         <article
 
-            className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-gray-100"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-gray-100 dark:border-gray-700"
 
             style={{ animationDelay: `${index * 100}ms` }}
 
         >
 
+            {/* Project Image */}
+            {image && (
+                <div className="mb-4">
+                    <img
+                        src={image}
+                        alt={`${title} project screenshot`}
+                        className="w-full h-48 object-cover rounded-lg"
+                    />
+                </div>
+            )}
+
             <div className="mb-4">
 
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{title}</h3>
 
-                <p className="text-gray-600 leading-relaxed">{description}</p>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{description}</p>
 
             </div>
 
@@ -34,7 +45,7 @@ const ProjectCard = ({ title, description, techStack, githubUrl, liveUrl, index 
 
                             key={techIndex}
 
-                            className="inline-block bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-0.5 rounded"
+                            className="inline-block bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium px-2.5 py-0.5 rounded"
 
                         >
 
@@ -62,7 +73,7 @@ const ProjectCard = ({ title, description, techStack, githubUrl, liveUrl, index 
 
                         rel="noopener noreferrer"
 
-                        className="inline-flex items-center text-sm text-gray-700 hover:text-gray-900 transition-colors"
+                        className="inline-flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
 
                         aria-label={`View ${title} on GitHub`}
 
@@ -90,7 +101,7 @@ const ProjectCard = ({ title, description, techStack, githubUrl, liveUrl, index 
 
                         rel="noopener noreferrer"
 
-                        className="inline-flex items-center text-sm text-gray-700 hover:text-gray-900 transition-colors"
+                        className="inline-flex items-center text-sm text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
 
                         aria-label={`View live demo of ${title}`}
 
