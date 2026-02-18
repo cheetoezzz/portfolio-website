@@ -17,7 +17,7 @@ const Projects = () => {
             title: "SHOPORA – Minimalist E-Commerce Website",
             description: "A modern full-stack minimalist e-commerce web application that allows users to browse products and add items to cart",
             techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Context API", "REST API"],
-            githubUrl: "https://github.com/cheetoezzz/shopora-ecommerce",
+            githubUrl: "https://e-commerce-seven-mu-53.vercel.app/",
             liveUrl: "https://shopora-ecommerce.vercel.app/",
             image: shoporaImage
         },
