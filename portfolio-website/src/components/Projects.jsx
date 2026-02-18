@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import eventrackerImage from '../assets/eventracker.JPG';
+import shoporaImage from '../assets/sshopora.png';
 
 const Projects = () => {
     const projects = [
@@ -12,6 +13,15 @@ const Projects = () => {
             liveUrl: "https://event-tracker-lilac-tau.vercel.app/",
             image: eventrackerImage
         },
+        {
+            title: "SHOPORA – Minimalist E-Commerce Website",
+            description: "A modern full-stack minimalist e-commerce web application that allows users to browse products and add items to cart",
+            techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Context API", "REST API"],
+            githubUrl: "https://github.com/cheetoezzz/shopora-ecommerce",
+            liveUrl: "https://shopora-ecommerce.vercel.app/",
+            image: shoporaImage
+        },
+
         // {
         //     title: "E-Commerce Platform",
         //     description: "A full-stack e-commerce solution with user authentication, payment processing, and inventory management. Built with modern technologies and best practices.",
