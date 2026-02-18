@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import eventrackerImage from '../assets/eventracker.JPG';
 
 const Projects = () => {
     const projects = [
@@ -9,7 +10,7 @@ const Projects = () => {
             techStack: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "Ticketmaster API", "Bandsintown API"],
             githubUrl: "https://github.com/cheetoezzz/concert-event-tracker",
             liveUrl: "https://event-tracker-lilac-tau.vercel.app/",
-            image: "/src/assets/eventtracker.PNG"
+            image: eventrackerImage
         },
         // {
         //     title: "E-Commerce Platform",
