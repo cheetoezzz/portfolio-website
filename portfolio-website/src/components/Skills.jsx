@@ -7,12 +7,12 @@ const Skills = () => {
             "Tailwind CSS", "Material-UI", "Redux", "Next.js"
         ],
         "Backend": [
-            "Node.js", "Express.js", "Python", "Django", "PostgreSQL",
+            "Node.js", "Express.js", "Python", "Django", "PHP", "Laravel", "PostgreSQL",
             "MongoDB", "REST APIs"
         ],
         "Tools & Others": [
             "Git", "Docker", "AWS", "Supabase", "VS Code",
-            "Figma", "Agile/Scrum", "CI/CD"
+            "Figma", "Agile/Scrum", "CI/CD", "WordPress", "Divi Builder", "Elementor"
         ]
     };
 

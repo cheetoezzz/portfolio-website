@@ -7,7 +7,7 @@ const Projects = () => {
     const projects = [
         {
             title: "Concert Event Tracker",
-            description: "A modern full-stack web application that allows users to discover and track upcoming concerts",
+            description: "A modern web application that allows users to discover and track upcoming concerts",
             techStack: ["Next.js (App Router)", "TypeScript", "Tailwind CSS", "Ticketmaster API", "Bandsintown API"],
             githubUrl: "https://github.com/cheetoezzz/concert-event-tracker",
             liveUrl: "https://event-tracker-lilac-tau.vercel.app/",
@@ -15,7 +15,7 @@ const Projects = () => {
         },
         {
             title: "SHOPORA – Minimalist E-Commerce Website",
-            description: "A modern full-stack minimalist e-commerce web application that allows users to browse products and add items to cart",
+            description: "A modern minimalist e-commerce web application that allows users to browse products and add items to cart",
             techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Context API", "REST API"],
             githubUrl: "https://github.com/cheetoezzz/ecom",
             liveUrl: "https://e-commerce-seven-mu-53.vercel.app/",
