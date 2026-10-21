@@ -1,0 +1,24 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+import { Image } from 'astro:assets';
+import workspace from '../assets/images/developer-workspace.jpg';
+import TechLogo from './TechLogo.astro';
+const expertise = [
+  { icon: 'monitor', title: 'WordPress Development', description: 'Custom websites, themes, and Elementor solutions.' },
+  { icon: 'cart', title: 'WooCommerce', description: 'E-commerce websites and customized store experiences.' },
+  { icon: 'code', title: 'Frontend Development', description: 'Responsive layouts, interactive interfaces, and modern JavaScript.' },
+  { icon: 'database', title: 'Web Applications', description: 'Modern web applications and API integrations.' },
+];
+---
+<section id="about" class="section about-section"><div class="container">
+  <div class="about-grid"><div class="about-copy"><SectionHeading number="01" label="ABOUT ME" title="About Me" />
+    <p>I'm Arc John Torralba, a web developer with practical experience working on WordPress websites, corporate projects, freelance development, and modern web applications. I specialize in creating responsive, user-friendly websites and custom solutions that balance clean design, functionality, and maintainable code.</p>
+    <p>My primary development stack includes WordPress, Elementor, WooCommerce, JavaScript, PHP, HTML, CSS, Astro, and Payload CMS. I also work with modern technologies such as React.js, Three.js, Node.js, Tailwind CSS, Express.js, and PostgreSQL to create interactive interfaces and scalable web applications.</p>
+  </div>
+  <div class="workspace-photo">
+    <Image src={workspace} alt="Laptop with JavaScript code open on a white desk beside a potted plant and yellow mug" widths={[400, 640, 960, 1200]} sizes="(max-width: 850px) calc(100vw - 40px), (max-width: 1240px) 40vw, 480px" width={1200} format="webp" loading="lazy" />
+    <div class="quote-card"><span class="quote-mark" aria-hidden="true">“</span><span>Build.<br />Design.<br />Develop.<br />Improve.</span><span class="quote-rule" aria-hidden="true"></span></div>
+  </div></div>
+  <div class="expertise-grid">{expertise.map(item => <article class="card expertise-card"><span class="icon-tile">{item.icon === 'monitor' ? <TechLogo name="WordPress" /> : <Icon name={item.icon} />}</span><div><h3>{item.title}</h3><p>{item.description}</p></div></article>)}</div>
+</div></section>

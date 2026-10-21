@@ -1,0 +1,42 @@
+---
+import Brand from './Brand.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import Icon from './Icon.astro';
+---
+<header class="site-header">
+  <div class="container nav-inner">
+    <Brand />
+    <nav id="main-navigation" aria-label="Main navigation"><ul>{['About', 'Projects', 'Skills', 'Contact'].map(label => <li><a href={`/#${label.toLowerCase()}`}>{label}</a></li>)}</ul></nav>
+    <div class="nav-actions"><ThemeToggle /><button type="button" class="menu-toggle icon-button" aria-label="Open navigation" aria-controls="main-navigation" aria-expanded="false" hidden><Icon name="menu" /></button></div>
+  </div>
+</header>
+<script>
+  const menu = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.querySelector<HTMLElement>('#main-navigation');
+  function closeMenu() { menu?.setAttribute('aria-expanded', 'false'); menu?.setAttribute('aria-label', 'Open navigation'); nav?.classList.remove('is-open'); }
+  if (menu && nav) {
+    menu.hidden = false;
+    nav.classList.add('enhanced');
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') !== 'true';
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      nav.classList.toggle('is-open', open);
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { closeMenu(); menu.focus(); } });
+    document.addEventListener('click', event => { if (event.target instanceof Node && !nav.contains(event.target) && !menu.contains(event.target)) closeMenu(); });
+    matchMedia('(min-width: 701px)').addEventListener('change', closeMenu);
+  }
+  const sections = [...document.querySelectorAll<HTMLElement>('main section[id]')];
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('#main-navigation a')];
+  let queued = false;
+  function updateActive() {
+    const current = sections.filter(section => section.getBoundingClientRect().top <= 160).at(-1);
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
+    links.forEach(link => { if (link.hash === `#${atBottom ? 'contact' : current?.id}`) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
+    queued = false;
+  }
+  window.addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(updateActive); } }, { passive: true });
+  updateActive();
+</script>

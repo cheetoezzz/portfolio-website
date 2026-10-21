@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arctorra.vercel.app/sitemap-index.xml

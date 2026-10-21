@@ -1,0 +1,6 @@
+---
+import { skillGroups, additionalSkills } from '../data/skills';
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+---
+<section id="skills" class="section skills-section"><div class="container"><SectionHeading number="03" label="SKILLS" title="Skills" subtitle="Technologies and tools I work with." /><div class="skills-grid">{skillGroups.map(group => <article class:list={['card', 'skill-card', { 'core-card': group.primary }]}><div class="skill-title"><span class="icon-tile"><Icon name={group.icon} /></span><h3>{group.title}</h3>{group.primary && <span class="specialty">PRIMARY</span>}</div><ul class="pills">{group.skills.map(skill => <li>{skill}</li>)}</ul></article>)}</div><details class="additional-skills"><summary>Also worked with</summary><ul class="pills">{additionalSkills.map(skill => <li>{skill}</li>)}</ul></details></div></section>

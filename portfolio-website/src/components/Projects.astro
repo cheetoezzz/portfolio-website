@@ -1,0 +1,7 @@
+---
+import { projects } from '../data/projects';
+import ProjectCard from './ProjectCard.astro';
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+---
+<section id="projects" class="section projects-section"><div class="container"><div class="section-top"><SectionHeading number="02" label="PROJECTS" title="Projects" subtitle="A selection of my recent work and personal development projects." /><a class="text-link" href="https://github.com/cheetoezzz?tab=repositories" target="_blank" rel="noopener noreferrer">More on GitHub <Icon name="arrow" /><span class="sr-only">(new tab)</span></a></div><div class="projects-grid">{projects.map(project => <ProjectCard project={project} />)}</div></div></section>

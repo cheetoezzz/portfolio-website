@@ -1,0 +1,10 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+const contacts = [
+  { label: 'Email', value: 'torralbaarcjohn@gmail.com', href: 'mailto:torralbaarcjohn@gmail.com', icon: 'mail' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/arcjohntorralba', href: 'https://www.linkedin.com/in/arcjohntorralba/', icon: 'linkedin' },
+  { label: 'GitHub', value: 'github.com/cheetoezzz', href: 'https://github.com/cheetoezzz', icon: 'github' },
+];
+---
+<section id="contact" class="section contact-section"><div class="container contact-layout"><div><SectionHeading number="04" label="CONTACT" title="Get In Touch" subtitle="Let's build something great together." /><p class="contact-description">I'm always interested in new opportunities, collaborations, and projects involving WordPress development, e-commerce, and modern web technologies.</p></div><div class="contact-grid">{contacts.map(contact => <a class="card contact-card" href={contact.href} target={contact.icon === 'mail' ? undefined : '_blank'} rel={contact.icon === 'mail' ? undefined : 'noopener noreferrer'}><span class="icon-tile"><Icon name={contact.icon} /></span><h3>{contact.label}</h3><span class="contact-value">{contact.value}</span><Icon name="arrow" class="contact-arrow" />{contact.icon !== 'mail' && <span class="sr-only">Opens in a new tab</span>}</a>)}</div></div></section>

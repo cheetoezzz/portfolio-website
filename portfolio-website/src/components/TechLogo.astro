@@ -1,0 +1,8 @@
+---
+import { siWordpress, siElementor, siWoocommerce, siAstro, siPayloadcms } from 'simple-icons';
+interface Props { name: string; }
+const { name } = Astro.props;
+const icons = { WordPress: siWordpress, Elementor: siElementor, WooCommerce: siWoocommerce, Astro: siAstro, 'Payload CMS': siPayloadcms };
+const icon = icons[name as keyof typeof icons];
+---
+{icon && <svg class="technology-logo" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={`--logo-color: #${icon.hex}`}><path d={icon.path} /></svg>}

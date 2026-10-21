@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import laptop from '../assets/images/developer-laptop.jpg';
+import Icon from './Icon.astro';
+import TechLogo from './TechLogo.astro';
+
+const highlights = [
+  { icon: 'wordpress', title: 'WordPress & WooCommerce', description: 'Custom websites and online stores' },
+  { icon: 'code', title: 'Custom Web Solutions', description: 'Tailored to real business needs' },
+  { icon: 'cube', title: 'Modern Web Applications', description: 'Interactive and scalable solutions' },
+];
+---
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="developer-badge"><span></span> WEB DEVELOPER</p>
+      <h1 id="hero-title">Arc John <span>Torralba</span></h1>
+      <p class="hero-subtitle">Web Developer <span>| WordPress &amp; Modern Web Applications</span></p>
+      <p class="hero-description">I build responsive websites, e-commerce solutions, and modern web applications using WordPress, Elementor, WooCommerce, JavaScript, PHP, Astro, and modern frontend technologies.</p>
+      <div class="hero-buttons">
+        <a class="button button-primary" href="#projects">View Projects <Icon name="arrow" /></a>
+        <a class="button button-secondary" href="#contact">Get In Touch</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <Image src={laptop} alt="Laptop displaying a code editor on a bright desk beside a phone, headphones, and a coffee cup" widths={[640, 960, 1280, 1600]} sizes="(max-width: 850px) 100vw, 76vw" width={1600} format="webp" loading="eager" fetchpriority="high" />
+    </figure>
+    <aside class="technology-panel" aria-label="Featured technologies">
+      <ul>{['WordPress', 'Elementor', 'WooCommerce', 'Astro', 'Payload CMS'].map(name => <li><TechLogo name={name} /><span>{name}</span></li>)}</ul>
+    </aside>
+    <ul class="hero-highlights">
+      {highlights.map(item => <li><span class="icon-tile">{item.icon === 'wordpress' ? <TechLogo name="WordPress" /> : <Icon name={item.icon} />}</span><div><strong>{item.title}</strong><span>{item.description}</span></div></li>)}
+    </ul>
+  </div>
+</section>
