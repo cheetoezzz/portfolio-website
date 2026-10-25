@@ -22,7 +22,7 @@ export const projects: Project[] = [
     imageAlt: 'Concert Event Tracker homepage with concert search and trending live music events',
     technologies: ['Next.js (App Router)', 'TypeScript', 'Tailwind CSS', 'Ticketmaster API', 'Bandsintown API'],
     githubUrl: 'https://github.com/cheetoezzz/concert-event-tracker',
-    liveUrl: 'https://event-tracker-lilac-tau.vercel.app/',
+    liveUrl: 'https://event-tracker-one-xi.vercel.app/',
     category: 'Web application', featured: true,
   },
   {
